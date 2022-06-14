@@ -5,14 +5,15 @@ import { Link} from 'react-router-dom';
 
 const HomePage = () => {
     const [pokemon,setPokemon] = useState([]);
+    const api = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100"
 
     useEffect(()=>{
-        axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100").then((res)=>{
+        axios.get(api).then((res)=>{
             setPokemon(res.data.results);
         }).catch((err)=>{
             console.log(err);
         })
-    })
+    }, [api])
 
     return (
         <>

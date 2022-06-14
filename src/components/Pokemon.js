@@ -7,18 +7,18 @@ const Pokemon = () => {
     const {name} = useParams();
     const [details,setDetails] = useState(null);
 
-    const url = `https://pokeapi.co/api/v2/pokemon/${name}`
+    const api = `https://pokeapi.co/api/v2/pokemon/${name}`
 
     let content = null
     
     useEffect(()=>{
-      axios.get(url).then((res)=>{
+      axios.get(api).then((res)=>{
         console.log(res.data);
         setDetails(res.data);
       }).catch((err)=>{
         console.log(err);
       })
-    },[url])
+    },[api])
     
     if(details){
       content =
