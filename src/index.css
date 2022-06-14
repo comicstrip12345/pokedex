@@ -1,13 +1,121 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #1F4690;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+nav a {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  font-family: Poppins;
+  font-weight: 900;
+  font-size: 4vh;
+}
+
+section.hero .pokemon {
+  padding: 5vh;
+}
+
+section.hero .pokemon a {
+  font-family: Poppins;
+  font-weight: 700;
+  color: white;
+  font-size: 3vh;
+  transition: 0.1s all ease-in-out;
+}
+
+section.hero .pokemon a .tile {
+  padding: 3vh;
+  border: 1px solid white;
+  border-radius: 2vh;
+  text-align: center;
+  transition: 0.2s all ease-in-out;
+}
+
+section.hero .pokemon a .tile:hover {
+  background-color: white;
+}
+
+section.hero .pokemon a .tile:active {
+  background-color: red;
+  border: none;
+}
+
+section.hero .pokemon a:hover {
+  color: black;
+}
+
+@media screen and (max-width: 575px) {
+  section.hero .pokemon a {
+    font-size: 3.3vw;
+  }
+}
+
+section.pokemon .details {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.pokemon .details .title h1 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: white;
+  font-size: 3.5vh;
+  margin: 0;
+}
+
+section.pokemon .details .list {
+  padding: 2vh;
+}
+
+section.pokemon .details .list p {
+  margin: 0;
+  padding: 0.5vh;
+  font-family: Quicksand;
+  color: white;
+  font-size: 2.7vh;
+}
+
+@media screen and (max-width: 575px) {
+  section.pokemon .image {
+    text-align: center;
+    margin-bottom: 4vh;
+  }
+  section.pokemon .image img {
+    height: 50vh;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) and (orientation: landscape) {
+  section.pokemon .image {
+    text-align: center;
+  }
+  section.pokemon .image img {
+    height: 68vh;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  section.pokemon .image {
+    text-align: center;
+  }
+  section.pokemon .image img {
+    height: 50vh;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+  section.pokemon .image {
+    text-align: center;
+  }
+  section.pokemon .image img {
+    height: 70vh;
+  }
 }
